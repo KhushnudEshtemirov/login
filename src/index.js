@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route index element={<Login />} />
-        {/* <Route path="/api/oauth/google" element={<Redirect />} /> */}
+        <Route path="/redirect/facebook/:id" element={<Redirect />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

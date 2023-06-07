@@ -1,28 +1,21 @@
-// import { GoogleLogin } from "@react-oauth/google";
+import { GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 function Login() {
   const [userData, setUserData] = useState(null);
 
-  // const handleClick = () => {
-  //   window.open("https://login-goole.vercel.app/api/oauth/google", "_self");
-  // };
+  const handleClick = () => {
+    window.open("https://api.vatandoshlarfondi.uz/api/oauth/facebook", "_self");
+  };
 
-  async function handleClick() {
-    const smth = await axios.get(
-      "https://api.vatandoshlarfondi.uz/api/oauth/google"
-    );
+  // useEffect(() => {
+  //   const getUser = axios
+  //     .get("https://api.vatandoshlarfondi.uz/api/oauth/call-back/google")
+  //     .then((res) => res.data);
 
-    console.log(smth);
-
-    // const getUser = axios
-    // .get("https://api.vatandoshlarfondi.uz/api/oauth/call-back/google")
-    // .then((res) => res.data);
-
-    // console.log(getUser);
-  }
-  // useEffect(() => {}, []);
+  //   console.log(getUser);
+  // }, []);
 
   return (
     <button onClick={handleClick}>Login</button>
