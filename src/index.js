@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route index element={<Login />} />
-        <Route path="/redirect/facebook/:id" element={<Redirect />} />
+        <Route path="/redirect/facebook" element={<Redirect />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
