@@ -6,10 +6,7 @@ function Login() {
   const [userData, setUserData] = useState(null);
 
   const handleClick = () => {
-    window.open(
-      "https://vatandoshlar.napaautomotive.uz/api/oauth/google",
-      "_self"
-    );
+    window.open("https://login-goole.vercel.app/api/oauth/google", "_self");
   };
 
   useEffect(() => {
