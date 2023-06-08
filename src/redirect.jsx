@@ -5,9 +5,9 @@ import { useLocation } from "react-router-dom";
 const Redirect = () => {
   const location = useLocation();
 
-  console.log(location.search.slice(7));
+  console.log(location.search.slice(6));
 
-  const url = location.search.slice(7);
+  const url = location.search.slice(6);
 
   useEffect(() => {
     const getUser = async () => {
