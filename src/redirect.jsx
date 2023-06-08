@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Redirect = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   console.log(location.search.slice(6));
 
@@ -19,6 +20,9 @@ const Redirect = () => {
           .then((res) => res.data);
 
         console.log(user);
+        if (user.token) {
+          navigate("/");
+        }
       } catch (e) {
         console.log(e);
       }
