@@ -2,11 +2,11 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 const Redirect = () => {
-  const { pathname } = useLocation();
+  const location = useLocation();
 
-  console.log(pathname);
+  console.log(location);
 
-  return <div>{pathname}</div>;
+  return <div>{location}</div>;
 };
 
 export default Redirect;
