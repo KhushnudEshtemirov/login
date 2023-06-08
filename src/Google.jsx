@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const Redirect = () => {
+const Google = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -11,11 +11,11 @@ const Redirect = () => {
   const url = location.search.slice(6);
 
   useEffect(() => {
-    const getUser = async () => {
+    const getGoogleUser = async () => {
       try {
         const user = await axios
           .get(
-            `https://api.vatandoshlarfondi.uz/api/oauth/call-back/facebook?code=${url}`
+            `https://api.vatandoshlarfondi.uz/api/oauth/call-back/google?code=${url}`
           )
           .then((res) => res.data);
 
@@ -28,10 +28,10 @@ const Redirect = () => {
       }
     };
 
-    getUser();
+    getGoogleUser();
   }, []);
 
-  return <div>hwqugduiqwgdiuqwg</div>;
+  return <div>Google</div>;
 };
 
-export default Redirect;
+export default Google;

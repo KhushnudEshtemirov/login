@@ -4,7 +4,8 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Login from "./login";
-import Redirect from "./redirect";
+import Google from "./Google";
+import Facebook from "./Facebook";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,7 +13,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route index element={<Login />} />
-        <Route path="/redirect/facebook" element={<Redirect />} />
+        <Route path="/redirect/google" element={<Google />} />
+        <Route path="/redirect/facebook" element={<Facebook />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
